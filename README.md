@@ -35,9 +35,11 @@ yum -y install unzip
 ```cd docker-jitsi-meet-master```
 
 拷贝`env.example`文件，作为配置文件
+
 ```cp env.example .env```
 
 修改配置文件`.env`
+
 ```vi .env```
 
 ```TZ=UTC ==> TZ=Asia/Shanghai （可不改）
@@ -49,13 +51,19 @@ AUTH_TYPE 去掉 `#`
 
 生成密码```sh gen-passwords.sh```
 
+
 启动
 ```docker-compose up -d```
 
 等待启动完成
 
 
-nginx配置代理
+##### nginx安装
+
+`nginx安装方法请自行查阅`
+
+
+##### nginx配置代理
 
 去掉443端口注释
 替换location / 配置
